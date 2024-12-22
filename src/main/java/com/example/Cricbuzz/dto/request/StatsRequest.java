@@ -18,5 +18,4 @@ public class StatsRequest {
     double battingAvg;
 
     double bowlingAvg;
-
 }

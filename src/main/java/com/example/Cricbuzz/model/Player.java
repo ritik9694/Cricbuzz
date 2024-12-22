@@ -2,6 +2,7 @@ package com.example.Cricbuzz.model;
 
 import com.example.Cricbuzz.model.Enum.Gender;
 import com.example.Cricbuzz.model.Enum.Speciality;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -30,6 +31,7 @@ public class Player {
     Gender gender;
 
     @OneToOne(mappedBy = "player" , cascade = CascadeType.ALL)
+            @JsonManagedReference
     Stats stats;
 
     @ManyToOne

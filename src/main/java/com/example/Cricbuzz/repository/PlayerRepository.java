@@ -11,7 +11,7 @@ import java.util.List;
 public interface PlayerRepository extends JpaRepository<Player, Integer> {
     List<Player> findByGenderAndAgeIsGreaterThanEqual(Gender gender, int age);
 
-    @Query(value = "select p from player p where p.gender = :gender AND p.speciality = :speciality")
+    @Query(value = "select p from Player p where p.gender = :gender AND p.speciality = :speciality")
     List<Player> getByGenderAndSpeciality(Gender gender, Speciality speciality);
 }
 
