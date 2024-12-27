@@ -15,6 +15,8 @@ public class PlayerRequest {
 
     int age;
 
+    String email;
+
     Speciality speciality;
 
     Gender gender;
